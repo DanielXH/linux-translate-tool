@@ -4,6 +4,8 @@
 
 注：使用该工具需要联网
 
+![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img4.png)
+
 ## 开发原因
 有时候想要查单词或者翻译，觉得打开网站去查太麻烦，上网找关于linux的翻译工具，似乎很多项目都已经多年没有人维护了。
 
@@ -89,6 +91,20 @@ python3 ./translate.py hello
 
 如果你要查的是一带有空格的句子，那就要用单/双引号括起来。
 
+可以看到，该翻译工具支持单词或句子~~（这是最吼滴！）~~。
+
+同时可以自动识别以下八种语言：
+
+- 中文
+- 日文
+- 英文
+- 韩文
+- 法文
+- 俄文
+- 葡萄牙文
+- 西班牙文
+
+![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img4.png)
 
 当然，你也可以像一般命令一样，使用以下命令查看帮助：
 ```
@@ -97,8 +113,7 @@ python3 ./translate.py -help
 ```
 虽然它没什么卵用，当你真正需要查找帮助的时候，这提示也帮不了你什么哈哈哈 - -
 
-
-### 6）进度
+### 6）开发进度
 
 - [ ] 封装linux安装包
 - [x] 有道翻译api
