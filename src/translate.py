@@ -12,13 +12,13 @@ import argparse
 # -----------------------------
 
 
-# -------- api 用户信息 ---------
+# --------- api 信息 -----------
 # 有道翻译
 youdaoApi = 'http://openapi.youdao.com/api'
 youdaoAppKey = ''
 youdaoSecretKey = ''
 
-# ------------------------------
+# -----------------------------
 
 # 查询函数  t: translate
 # 有道翻译api
