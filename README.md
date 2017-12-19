@@ -21,15 +21,16 @@
 
 根据官方计费方式，每一百万字符价格为48元，所以注册一个帐号足以够我们个人使用了。
 
-### 2） 创建应用
+### 2） 在有道智云上创建应用
 在自然语言翻译->翻译实例中，创建一个实例。实例名称随便填。
+![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img2.png)
 
 在应用管理中->我的应用中，创建一个应用。名称、类别、描述随便填。
+![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img1.png)
 
 创建应用后，添加刚刚创建的应用实例。
 
-
-进入该应用，拿到我们需要的应用ID（appKey）和应用密钥（secretKey）
+进入该应用，拿到我们需要的应用ID（appKey）和应用密钥（secretKey）。
 
 ### 3）下载、添加文件
 下载文件：
@@ -40,7 +41,7 @@ git clone https://github.com/DanielXH/linux-translate-tool.git
 把`src/translate.py`文件复制到另一目录下。
 
 修改`tranlate.py`文件，将文件内 `youdaoAppKey` 和 `youdaoSecretKey` 的值设置为刚刚拿到的 `appKey` 和 `secretKey` 值：
-
+![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img3.png)
 
 
 给该文件添加执行权限：
