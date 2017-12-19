@@ -60,7 +60,7 @@ python3 ./translate.py hello
 ```
 
 
-### 4） 添加到命令行命令 **（暂时不可用）**
+### 4） 添加到命令行命令 
 如果每次都要像下面一样调用方法，就每次都要进入该文件的目录，难免会觉得比较麻烦。
 ```
 python3 ./translate.py hello
@@ -70,9 +70,23 @@ python3 ./translate.py hello
 
 使用root帐号，打开从根目录起，找到`/root/.bashrc`文件，在文件最后添加下面命令：
 ```
-alias tl='translate() {python3 /home/xudongh/Software/terminal-translate-tool/translate.py $1;}; tl'
+alias tl='tl() {python3 /home/xudongh/Software/terminal-translate-tool/translate.py $1;}; tl'
 ```
 如果无法修改`.bashrc`文件，那就先添加修改权限。
+
+这样我们可以直接如下使用：
+```
+tl hello
+```
+
+不过这种方法有一点比较麻烦，就是我们刚刚只是在root用户下的`.bashrc`添加了`alias`规则，所以只能在root用户使用。
+
+在一般用户下就不能使用该命令，此时还要在一般用户的目录下的`.bashrc`添加`alias`规则。例如我的用户名是`xudongh`，那么就同样修改`xudongh/.bashrc`:
+```
+alias tl='tl() {python3 /home/xudongh/Software/terminal-translate-tool/translate.py $1;}; tl'
+```
+
+这样的话，就能在两个用户下都能使用该翻译工具（一般个人电脑其实就两个用户）。
 
 注意：
 
@@ -81,15 +95,24 @@ alias tl='translate() {python3 /home/xudongh/Software/terminal-translate-tool/tr
 
 
 ### 5）使用方法
-如上面所述，只要运行该py文件就可以了,非常简单：
+如上面所述，只要进入相应该文件目录，运行该py文件就可以了,非常简单：
 ```
 python3 ./translate.py hello
 ```
+
+如果你配置了`alias`规则，还可以更方便：
+```
+tl hello
+```
+
 目前，调用一次命令只返回一次结果。
 
 如果你要查的是一个单词，那参数可以是hello、'hello'、"hello"，三种方式均可；
 
 如果你要查的是一带有空格的句子，那就要用单/双引号括起来。
+
+> *不过，目前发现，如果使用tl进行翻译查询，传入的参数不能带有空格，即便使用单/双引号也不行。*
+> *emmmmmm... 这个问题有时间再搞吧 - -*
 
 可以看到，该翻译工具支持单词或句子;
 
