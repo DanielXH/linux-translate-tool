@@ -23,9 +23,11 @@
 
 ### 2） 在有道智云上创建应用
 在自然语言翻译->翻译实例中，创建一个实例。实例名称随便填。
+
 ![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img2.png)
 
 在应用管理中->我的应用中，创建一个应用。名称、类别、描述随便填。
+
 ![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img1.png)
 
 创建应用后，添加刚刚创建的应用实例。
@@ -41,6 +43,7 @@ git clone https://github.com/DanielXH/linux-translate-tool.git
 把`src/translate.py`文件复制到另一目录下。
 
 修改`tranlate.py`文件，将文件内 `youdaoAppKey` 和 `youdaoSecretKey` 的值设置为刚刚拿到的 `appKey` 和 `secretKey` 值：
+
 ![](https://raw.githubusercontent.com/DanielXH/linux-translate-tool/master/src/images/linux-translate-tool-img3.png)
 
 
